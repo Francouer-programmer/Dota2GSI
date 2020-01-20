@@ -1,0 +1,163 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0px;
+    background: radial-gradient(farthest-corner at 30vw 20vh,#7397a1 1%,#3f2c41 100%);
+}
+
+.info_box_top {
+    background-color: green;
+    margin: 0px auto;
+    border: 1px solid #ccc;
+    width: 50%;
+    height: 40px;
+    display: flex;
+}
+
+
+.team2 {
+    background-color: blue;
+    padding-right: 0px;
+    float: left;
+    width: 370px;
+    margin-right: 0;
+    margin-left: auto;
+    height: 40px;
+    display: flex;
+    position: relative;
+}
+
+.time_box {
+    background-color: black;
+    float: left;
+    padding-left: 0px;
+    width: 60px;
+    height: 40px;
+    margin: 0px;
+    display: flex;
+    position: relative;
+}
+
+.team3 {
+    background-color: red;
+    float: left;
+    padding-left: 0px;
+    margin-left: 0;
+    margin-right: auto;
+    width: 370px;
+    height: 40px;
+    margin-left: 0px;
+    display: flex;
+    position: relative;
+}
+
+
+.hero {
+    background-color: white;
+    width: 70px;
+    height: 40px;
+    float: left;
+    border: black 1px solid;
+    margin: 0;
+    position: relative;
+}
+
+.kills_counter {
+    background-color: grey;
+    width: 70px;
+    height: 40px;
+    float: left;
+    margin: 0;
+    position: relative;
+}
+
+.kills_counter img {
+    display: none;
+}
+
+.time_box img {
+    display: none;
+}
+
+$s1: "";
+
+$s2: "";
+
+$s3: "";
+
+@for $i from 1 through 400 {
+    $s1: $s1 + random(1000)*0.1vw + " " + random(1000)*0.1vh + " " + 0 + " " + random(50)*-0.01rem + #fff;
+    $s2: $s2 + random(1000)*0.1vw + " " + random(1000)*0.1vh + " " + 0 + " " + random(50)*-0.01rem + #fff;
+    $s3: $s3 + random(1000)*0.1vw + " " + random(1000)*0.1vh + " " + 0 + " " + random(50)*-0.01rem + #fff;
+    @if $i < 400 {
+        $s1: $s1 + ",";
+        $s2: $s2 + ",";
+        $s3: $s3 + ",";
+    }
+}
+
+.smoke {
+    border-radius: 50%;
+    opacity: 0.8;
+    position: absolute;
+    top:100vh;
+    animation-name: fall;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.layer1 {
+    background-color: black;
+    width: 0.5rem;
+    height: 0.5rem;
+    filter:blur(1.5px);
+    box-shadow: #{$s1};
+    animation-duration: 8s;
+}
+
+.layer1.a {
+    animation-delay: -4s;
+}
+
+.layer2 {
+    background-color: black;
+    width: 0.2rem;
+    height: 0.2rem;
+    filter: blur(3px);
+    box-shadow: #{$s2};
+    animation-duration: 10s;
+}
+
+.layer2.a {
+    animation-delay: -2s;
+}
+
+.layer3 {
+    background-color: black;
+    width: 0.1rem;
+    height: 0.1rem;
+    filter: blur(6px);
+    box-shadow: #{$s3};
+    animation-duration: 14s;
+}
+
+.layer3.a {
+    animation-delay: -2s;
+
+}
+@keyframes fall {
+    100% {transform: translateY(-200vh); }
+}
+
+.middle {
+    float: left;
+    background-color: black;
+}
+
+.bottom {
+    float: left;
+    background-color: blueviolet;
+}

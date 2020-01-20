@@ -2,165 +2,180 @@
 <html>
 
 <head>
-    <title>Dota2 Layout</title>
-    <meta charset="utf-8" http-equiv="refresh" content="5">
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-
-        body {
-            padding: 0px;
-            margin: 0px;
-        }
-
-        .info_box_top {
-            background-color: magenta;
-            margin: 0px auto;
-            border: 1px solid #ccc;
-            width: 1000px;
-            height: 40px;
-            display: flex;
-        }
-
-
-        .team2 {
-            background-color: blue;
-            padding-right: 0px;
-            float: left;
-            width: 370px;
-            margin-right: 0;
-            margin-left: auto;
-            height: 40px;
-            display: flex;
-            position: relative;
-        }
-
-        .time_box {
-            background-color: black;
-            float: left;
-            padding-left: 0px;
-            width: 60px;
-            height: 40px;
-            margin: 0px;
-            display: flex;
-            position: relative;
-        }
-
-        .team3 {
-            background-color: red;
-            float: left;
-            padding-left: 0px;
-            margin-left: 0;
-            margin-right: auto;
-            width: 370px;
-            height: 40px;
-            margin-left: 0px;
-            display: flex;
-            position: relative;
-        }
-
-
-        .hero {
-            background-color: seashell;
-            width: 70px;
-            height: 40px;
-            float: left;
-            border: black 1px solid;
-            margin: 0;
-            position: relative;
-        }
-
-        .kills_counter {
-            background-color: grey;
-            width: 70px;
-            height: 40px;
-            float: left;
-            margin: 0;
-            position: relative;
-        }
-
-        .hero img {
-            display: none;
-        }
-
-        .kills_counter img {
-            display: none;
-        }
-
-        .time_box img {
-            display: none;
-        }
-    </style>
+  <title>Dota2 Layout</title>
+  <meta charset="utf-8" http-equiv="refresh" content="10" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  <style>
+    /*# sourceMappingURL=css/styles.css.map */
+  </style>
 </head>
 
 <body>
-    <div>
-        {{ .RoshanTimer}}
+  <div>
+    <div class="top-elements">
+      <div class="info_box_top">
+        <div class="team2">
+          <div id="player0" class="hero">
+            <div class="smoke layer1"></div>
+            <div class="smoke layer1 a"></div>
+            <div class="smoke layer2"></div>
+            <div class="smoke layer2 a"></div>
+            <div class="smoke layer3"></div>
+            <div class="smoke layer3 a"></div>
+          </div>
+          <div id="player1" class="hero">
+            <div class="smoke layer1"></div>
+            <div class="smoke layer1 a"></div>
+            <div class="smoke layer2"></div>
+            <div class="smoke layer2 a"></div>
+            <div class="smoke layer3"></div>
+            <div class="smoke layer3 a"></div>
+          </div>
+          <div id="player2" class="hero">
+            <div class="smoke layer1"></div>
+            <div class="smoke layer1 a"></div>
+            <div class="smoke layer2"></div>
+            <div class="smoke layer2 a"></div>
+            <div class="smoke layer3"></div>
+            <div class="smoke layer3 a"></div>
+          </div>
+          <div id="player3" class="hero">
+            <div class="smoke layer1"></div>
+            <div class="smoke layer1 a"></div>
+            <div class="smoke layer2"></div>
+            <div class="smoke layer2 a"></div>
+            <div class="smoke layer3"></div>
+            <div class="smoke layer3 a"></div>
+          </div>
+          <div id="player4" class="hero">
+            <div class="smoke layer1"></div>
+            <div class="smoke layer1 a"></div>
+            <div class="smoke layer2"></div>
+            <div class="smoke layer2 a"></div>
+            <div class="smoke layer3"></div>
+            <div class="smoke layer3 a"></div>
+          </div>
+          <div id="team2_counter" class="kills_counter">
 
-        <h1>{{ .DataMap }}</h1>
-        <div class="info_box_top">
-            <div class="team2">
-                <div id="player0" class="hero">
-                    <img src="lycan.png" alt="Trulli">
-                </div>
-                <div id="player1" class="hero">
-                    <img src="lycan.png" alt="Trulli">
-                </div>
-                <div id="player2" class="hero">
-                    <img src="lycan.png" alt="Trulli">
-                </div>
-                <div id="player3" class="hero">
-                    <img src="lycan.png" alt="Trulli">
-                </div>
-                <div id="player4" class="hero">
-                    <img src="lycan.png" alt="Trulli">
-                </div>
-                <div id="team2_counter" class="kills_counter">
-                    <img src="lycan.png" alt="Trulli">
-
-                </div>
-            </div>
-            <div class="time_box">
-                <img src="lycan.png" alt="Trulli">
-            </div>
-            <div class="team3">
-                <div id="team3_counter" class="kills_counter">
-                    <img src="lycan.png" alt="Trulli">
-
-                </div>
-                <div id="player5" class="hero">
-                    <img src="lycan.png" alt="Trulli">
-                </div>
-                <div id="player6" class="hero">
-                    <img src="lycan.png" alt="Trulli">
-                </div>
-                <div id="player7" class="hero">
-
-                    <img src="lycan.png" alt="Trulli">
-                </div>
-                <div id="player8" class="hero">
-
-                    <img src="lycan.png" alt="Trulli">
-                </div>
-                <div id="player9" class="hero">
-                    <img src="lycan.png" alt="Trulli">
-                </div>
-
-            </div>
+          </div>
         </div>
+        <div class="time_box"></div>
+
+        <div class="team3">
+          <div id="team3_counter" class="kills_counter">
+
+          </div>
+          <div id="player5" class="hero">
+            <div class="smoke layer1"></div>
+            <div class="smoke layer1 a"></div>
+            <div class="smoke layer2"></div>
+            <div class="smoke layer2 a"></div>
+            <div class="smoke layer3"></div>
+            <div class="smoke layer3 a"></div>
+          </div>
+          <div id="player6" class="hero">
+            <div class="smoke layer1"></div>
+            <div class="smoke layer1 a"></div>
+            <div class="smoke layer2"></div>
+            <div class="smoke layer2 a"></div>
+            <div class="smoke layer3"></div>
+            <div class="smoke layer3 a"></div>
+          </div>
+          <div id="player7" class="hero">
+            <div class="smoke layer1"></div>
+            <div class="smoke layer1 a"></div>
+            <div class="smoke layer2"></div>
+            <div class="smoke layer2 a"></div>
+            <div class="smoke layer3"></div>
+            <div class="smoke layer3 a"></div>
+
+          </div>
+          <div id="player8" class="hero">
+            <div class="smoke layer1"></div>
+            <div class="smoke layer1 a"></div>
+            <div class="smoke layer2"></div>
+            <div class="smoke layer2 a"></div>
+            <div class="smoke layer3"></div>
+            <div class="smoke layer3 a"></div>
+
+          </div>
+          <div id="player9" class="hero">
+            <div class="smoke layer1"></div>
+            <div class="smoke layer1 a"></div>
+            <div class="smoke layer2"></div>
+            <div class="smoke layer2 a"></div>
+            <div class="smoke layer3"></div>
+            <div class="smoke layer3 a"></div>
+          </div>
+        </div>
+      </div>
     </div>
-    <script>
-        var data = {};
-        data = {{ .DataMap }};
-        function showHero(id, property) {
-            document.getElementById(id).style.visibility = property;
-        }
-        {{range $k, $v := .DataMap}}
-        showHero({{$k}},{{$v}})
-        {{end}} 
-    </script>
+    <div class="middle-elements">
+      <div class="left-middle">
+        <div id="lm-one">
+
+        </div>
+        <div id="lm-two">
+
+        </div>
+        <div id="lm-three">
+
+        </div>
+      </div>
+
+      <div class="center-middle">
+        <div id="cm-one">
+
+        </div>
+        <div id="cm-two">
+
+        </div>
+        <div id="cm-three">
+
+        </div>
+      </div>
+
+      <div class="right-middle">
+        <div id="rm-one">
+
+        </div>
+        <div id="rm-two">
+
+        </div>
+        <div id="rm-three">
+
+        </div>
+      </div>
+    </div>
+    <div class="bottom-elements">
+      <div class="left-bottom">
+        <div id="lb-one">
+        </div>
+        <div id="lb-two">
+
+        </div>
+      </div>
+      <div class="center-bottom">
+        <div id="cb-one">
+        </div>
+      </div>
+      <div class="right-bottom">
+        <div id="rb-one">
+        </div>
+        <div id="rb-two">
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <script>
+    function showHero(id, property) {
+      document.getElementById(id).style.visibility = property;
+    }
+    {{range $k, $v := .DataMap}}
+    showHero({{$k}}, {{$v}})
+    {{end}} 
+  </script>
 
 </body>
 
