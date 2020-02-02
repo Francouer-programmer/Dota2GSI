@@ -1,5 +1,6 @@
 package dota2gsi
 
+//Dota2GSIData incomming JSON translated into go-struct.
 type Dota2GSIData struct {
 	Abilities struct {
 		Team2 struct {
