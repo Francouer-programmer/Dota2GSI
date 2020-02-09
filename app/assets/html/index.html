@@ -168,14 +168,13 @@
     </div>
   </div>
   </div>
-  <script>
+  <script type="text/javascript" src="http://localhost:3000/assets/js/admin/smoke.js">
     function showHero(id, property) {
       document.getElementById(id).style.visibility = property;
     }
     {{range $k, $v := .DataMap}}
     showHero({{$k}}, {{$v}})
     {{end}}
-
    
   </script>
 

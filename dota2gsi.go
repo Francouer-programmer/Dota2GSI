@@ -30,12 +30,22 @@ type GSIView interface {
 	GetSmokePlayer9() bool
 
 	GetRoshanTime() string
+
+	GetDota2GSIType() *Dota2GSIData
 }
 
+//GSIData implimentation of dota2gsi
+type GSIData struct {
+	Data Dota2GSIData
+}
 
-
+//GetDota2GSIType sends  GSIData to another module.
+func (dota *Dota2GSIData) GetDota2GSIType() *Dota2GSIData {
+	return dota
+}
+	
 //GetRoshanTime return respound roshans time in seconds.
-func (dota *Dota2GSIData) GetRoshanTime() string{
+func (dota *Dota2GSIData) GetRoshanTime() string {
 	if dota.Map.RoshanState != "alive" {
 		time.Sleep(2 * time.Second)
 		fmt.Println("Roshan state")

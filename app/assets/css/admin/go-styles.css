@@ -10,8 +10,18 @@
     overflow: hidden;
   }
 
-  .one {
+  .suitme {
+    float: left;
+    background-color: gray;
+    width: 100px;
+    height: 100px;
+  }
+
+  #one {
       float:left;
+      background-color: gray;
+      width: 100px;
+      height: 100px;
   }
 
   .two {

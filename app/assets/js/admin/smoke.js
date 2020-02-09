@@ -1,16 +1,35 @@
 var camera, scene, renderer,
     geometry, material, mesh;
 
-init();
-animate();
+var CANVAS_WIDTH = 300;
+var CANVAS_HEIGHT = 300;
 
-function init() {
+
+initClassElements();
+
+function pairArraysIntoDict(names, classes) {
+    
+    
+}
+
+function initClassElements() {
+    var array_1 = new Array("fee","fie","foo");
+    var Values = Object.values(document.getElementsByClassName("two"))
+    console.log(Values)
+    for (i in Values) {
+        array_1.forEach(name => init(Values[i], name));
+        animate(name);
+    }
+}
+
+function init(element, name) {
     stats = new Stats();
     stats.setMode(0);
     stats.domElement.style.position = 'absolute';
     stats.domElement.style.left = '0px';
     stats.domElement.style.top = '0px';
-    document.body.appendChild(stats.domElement);
+
+    element.appendChild(stats.domElement);
 
     clock = new THREE.Clock();
 
@@ -19,10 +38,17 @@ function init() {
     renderer.setSize(window.innerWidth, window.innerHeight);
 
     scene = new THREE.Scene();
+    
 
-    camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 10000);
+    camera = new THREE.PerspectiveCamera(75, CANVAS_WIDTH / CANVAS_HEIGHT, 1, 10000);
     camera.position.z = 1000;
     scene.add(camera);
+
+    // RENDERER
+
+    renderer = new THREE.WebGLRenderer();
+    renderer.setClearColor(0x000, 1.0);
+    renderer.setSize(CANVAS_WIDTH, CANVAS_HEIGHT);
 
     geometry = new THREE.BoxGeometry(200, 200, 200);
     material = new THREE.MeshLambertMaterial({ color: 0xa00ff, wireframe: false });
@@ -56,7 +82,7 @@ function init() {
         smokeParticles.push(particle);
     }
 
-    document.body.appendChild(renderer.domElement);
+    element.appendChild(renderer.domElement);
 
 }
 
